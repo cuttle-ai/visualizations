@@ -32,6 +32,7 @@
   "homepage": "https://github.com/cuttle-ai/visualizations#readme",
   "devDependencies": {
     "@types/jest": "^25.2.1",
+    "@types/jquery": "^3.3.35",
     "jest": "^25.3.0",
     "prettier": "^2.0.4",
     "ts-jest": "^25.4.0",
@@ -39,5 +40,10 @@
     "tslint": "^6.1.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "datatables.net": "^1.10.20",
+    "datatables.net-dt": "^1.10.20",
+    "jquery": "^3.5.0"
   }
 }

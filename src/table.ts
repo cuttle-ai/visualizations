@@ -1,6 +1,8 @@
 // Copyright 2019 Cuttle.ai. All rights reserved.
 // Use of this source code is governed by a MIT-style
 // license that can be found in the LICENSE file.
+import * as $ from 'jquery';
+import 'datatables.net'
 
 import QueryResult from './models/query';
 import { VizType, Viz } from './visualization';
@@ -67,7 +69,9 @@ export class TableVisualization implements Viz {
         }
         const headers = this.getHeaders();
         const body = this.getBody();
-        this.htmlElement.innerHTML = '<table>' + headers + body + '</table>';
+        this.htmlElement.innerHTML = '<table id="' + this.htmlElementId + '-cuttle-table">' + headers + body + '</table>';
+        let tableId: any = $('#' + this.htmlElementId + '-cuttle-table');
+        tableId.DataTable();
     }
 
     /**
