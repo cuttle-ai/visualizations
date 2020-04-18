@@ -70,7 +70,7 @@ export class TableVisualization implements Viz {
         const headers = this.getHeaders();
         const body = this.getBody();
         this.htmlElement.innerHTML = '<table id="' + this.htmlElementId + '-cuttle-table">' + headers + body + '</table>';
-        let tableId: any = $('#' + this.htmlElementId + '-cuttle-table');
+        const tableId: any = $('#' + this.htmlElementId + '-cuttle-table');
         tableId.DataTable();
     }
 
