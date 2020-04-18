@@ -11,9 +11,9 @@
  * This is the column/field values in the data
  */
 export default interface Metric {
-    resource_id: string // id of the item which is represented by the metric
-    display_name: string // name to be used as a display
-    name: string // actual item in the data
-    measure: boolean // states whether the metric is a measure type
-    dimension: boolean // states whether the metric is a dimension type
+  resource_id: string; // id of the item which is represented by the metric
+  display_name: string; // name to be used as a display
+  name: string; // actual item in the data
+  measure: boolean; // states whether the metric is a measure type
+  dimension: boolean; // states whether the metric is a dimension type
 }

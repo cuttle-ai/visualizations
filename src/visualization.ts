@@ -12,13 +12,15 @@ import QueryResult from './models/query';
  * Viz holds the visualization instance
  */
 export interface Viz {
-    /**
-     * type is type of visualization
-     */
-    type: VizType;
+  /**
+   * type is type of visualization
+   */
+  type: VizType;
 }
 
 /**
  * VizType indicates the type of visualization
  */
-export enum VizType { Table = 1 };
+export enum VizType {
+  Table = 1,
+}

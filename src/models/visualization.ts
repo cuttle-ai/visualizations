@@ -12,8 +12,8 @@ import Metric from './metric';
  * Visualization gives visual representation for data in terms of charts, tables, etc.
  */
 export default interface Visualization {
-    metrics: Metric[]; // metrics in the visualization
-    type: string; // type of visualization
-    title: string; // title of the visualization
-    description: string; // description for the visualization
+  metrics: Metric[]; // metrics in the visualization
+  type: string; // type of visualization
+  title: string; // title of the visualization
+  description: string; // description for the visualization
 }
