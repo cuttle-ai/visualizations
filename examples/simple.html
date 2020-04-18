@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple example</title>
+</head>
+
+<body>
+    <div id="table"></div>
+    <script src="/dist/bundle.js"></script>
+    <script>
+        let query = {
+            "tables": {
+                "b90fc434-e1c7-48eb-b7cb-230dc271397f": {
+                    "UID": "b90fc434-e1c7-48eb-b7cb-230dc271397f",
+                    "Word": [],
+                    "PUID": "00000000-0000-0000-0000-000000000000",
+                    "PN": null,
+                    "Name": "table_b90fc434-e1c7-48eb-b7cb-230dc271397f",
+                    "Children": [],
+                    "Resolved": false,
+                    "DefaultDateFieldUID": "",
+                    "DefaultDateField": null,
+                    "Description": "",
+                    "DatastoreID": 0
+                }
+            },
+            "select": [
+                {
+                    "uid": "b9386536-8763-45a0-a851-7e7f756b0353",
+                    "word": "cool",
+                    "puid": "b90fc434-e1c7-48eb-b7cb-230dc271397f",
+                    "name": "1",
+                    "resolved": true,
+                    "type": "Column",
+                    "aggregation_fn": "SUM",
+                    "data_type": "FLOAT",
+                    "description": ""
+                },
+                {
+                    "uid": "9e9ae78a-0b3c-4e42-bce2-bc33f8e242ee",
+                    "word": "asd",
+                    "puid": "b90fc434-e1c7-48eb-b7cb-230dc271397f",
+                    "name": "0",
+                    "resolved": true,
+                    "type": "Column",
+                    "aggregation_fn": "COUNT",
+                    "data_type": "STRING",
+                    "description": ""
+                }
+            ],
+            "result": [
+                {
+                    "0": "ads",
+                    "1": "234"
+                },
+                {
+                    "0": "fs",
+                    "1": "5"
+                }
+            ],
+            "metrics": [
+                {
+                    "resource_id": "b9386536-8763-45a0-a851-7e7f756b0353",
+                    "display_name": "cool",
+                    "name": "1"
+                },
+                {
+                    "resource_id": "9e9ae78a-0b3c-4e42-bce2-bc33f8e242ee",
+                    "display_name": "asd",
+                    "name": "0"
+                }
+            ],
+            "type": "TABLE",
+            "title": "Table",
+            "description": "cool, asd"
+        };
+        let table = visualizations.Init('table', query);
+    </script>
+</body>
+
+</html>
