@@ -13,10 +13,10 @@ import Visualization from "./visualization";
  * Query has the information the query for which the data is displayed in the visualization
  */
 export interface Query {
-    tables: object; //object contains the tables mapped to their ids
-    select: Column[]; //list of columns selected in the query
-    group_by: Column[]; //list of columns used for group by in the query
-    result: any; //contains the result of the query
+    tables: object; // object contains the tables mapped to their ids
+    select: Column[]; // list of columns selected in the query
+    group_by: Column[]; // list of columns used for group by in the query
+    result: any; // contains the result of the query
 }
 
 /**

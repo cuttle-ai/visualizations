@@ -36,7 +36,7 @@ export class TableVisualization implements Viz {
     /**
      * columnMap has the columns mapped to their index in the table
      */
-    columnMap = new Map<String, number>();
+    columnMap = new Map<string, number>();
     /**
      * columns has the number of columns in the table
      */
@@ -83,19 +83,19 @@ export class TableVisualization implements Viz {
         if (!this.queryResult?.select && !this.queryResult?.group_by) {
             return '';
         }
-        var result = '<thead><tr>';
+        let result = '<thead><tr>';
 
         // iterating though the select columns to add th
         const selectColumns = (this.queryResult?.select || []);
         let counter = 0;
-        for (let col of selectColumns) {
+        for (const col of selectColumns) {
             result += '<th>' + col.word + '</th>';
             this.columnMap.set(col.name, counter);
             counter++;
         }
         // iterating though the group by columns to add th
         const groupByColumns = (this.queryResult?.group_by || []);
-        for (let col of groupByColumns) {
+        for (const col of groupByColumns) {
             result += '<th>' + col.word + '</th>';
             this.columnMap.set(col.name, counter);
             counter++;
@@ -119,18 +119,21 @@ export class TableVisualization implements Viz {
         if (!this.queryResult?.result || !(this.queryResult?.result instanceof Array)) {
             return '';
         }
-        var result = '<tbody>';
+        let result = '<tbody>';
 
         // iterating though the data
         const data = this.queryResult?.result;
-        for (let row of data) {
+        for (const row of data) {
             const dt = new Array(this.columns);
-            for (let prop in row) {
+            for (const prop in row) {
+                if (!row.hasOwnProperty(prop)) {
+                    continue;
+                }
                 const index = this.columnMap.get(prop) || 0;
                 dt[index] = '<td>' + row[prop] + '</td>';
             }
             result += '<tr>';
-            for (let d of dt) {
+            for (const d of dt) {
                 result += d;
             }
             result += '</tr>';
