@@ -1,6 +1,6 @@
 {
   "name": "@cuttleai/visualizations",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "visualizations library for visualizing the data in cuttle platform wriiten in typescript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -14,7 +14,8 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "build:browser": "webpack"
+    "build:browser": "webpack",
+    "postbuild": "cp src/*.css lib/"
   },
   "repository": {
     "type": "git",
