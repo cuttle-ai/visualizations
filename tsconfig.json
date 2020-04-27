@@ -9,10 +9,16 @@
         "module": "commonjs",
         "declaration": true,
         "outDir": "./lib",
-        "strict": true
+        "strict": true,
+        "plugins": [
+            {
+                "name": "typescript-plugin-css-modules"
+            }
+        ]
     },
     "include": [
-        "src"
+        "src",
+        "css.d.ts"
     ],
     "exclude": [
         "node_modules",

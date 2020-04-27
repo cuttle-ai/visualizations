@@ -1,6 +1,6 @@
 {
   "name": "@cuttleai/visualizations",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "visualizations library for visualizing the data in cuttle platform wriiten in typescript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -33,13 +33,15 @@
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "@types/jquery": "^3.3.35",
+    "css-loader": "^3.5.3",
     "jest": "^25.3.0",
     "prettier": "^2.0.4",
     "ts-jest": "^25.4.0",
     "ts-loader": "^7.0.0",
     "tslint": "^6.1.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "style-loader": "^1.2.0"
   },
   "dependencies": {
     "datatables.net": "^1.10.20",

@@ -1,0 +1,71 @@
+.dataTables_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.dataTables_wrapper > div {
+  padding: 10px 15px;
+}
+
+.dataTables_wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dataTables_wrapper thead tr th {
+  background: black;
+  color: white;
+  font-weight: 100;
+  padding: 10px 20px;
+  border-bottom: solid 3px #acacac;
+  text-align: left;
+}
+
+.dataTables_wrapper th:not(:last-child)  {
+  border-right: solid 1px #acacac;
+  border-left: 0;
+}
+
+.dataTables_wrapper tbody tr:nth-child(2n) {
+  background: white;
+}
+
+.dataTables_wrapper tbody tr:nth-child(2n+1) {
+  background: #efefef;
+}
+
+.dataTables_wrapper td {
+  border: solid 1px #acacac;
+  padding: 10px 15px;
+  color: #6d6d6d;
+}
+
+.dataTables_wrapper tr:first-child td {
+  border-top: none;
+} 
+
+.dataTables_wrapper tr td:first-child {
+  border-left: none;
+}
+
+.dataTables_wrapper tr td:last-child {
+  border-right: none;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+  align-self: center;
+}
+
+.dataTables_wrapper .paginate_button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: solid 1px #bdbdbd;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.dataTables_wrapper .paginate_button:hover {
+  background: black;
+  color: white;
+  border: solid 1px white;
+}

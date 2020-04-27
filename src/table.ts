@@ -3,6 +3,7 @@
 // license that can be found in the LICENSE file.
 import * as $ from 'jquery';
 import 'datatables.net';
+import './style.module.css';
 
 import QueryResult from './models/query';
 import { VizType, Viz } from './visualization';
