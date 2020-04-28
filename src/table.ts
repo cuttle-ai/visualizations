@@ -72,7 +72,7 @@ export class TableVisualization implements Viz {
     const body = this.getBody();
     this.htmlElement.innerHTML = '<table id="' + this.htmlElementId + '-cuttle-table">' + headers + body + '</table>';
     const tableId: any = $('#' + this.htmlElementId + '-cuttle-table');
-    tableId.DataTable();
+    tableId.DataTable({ "destroy": true });
   }
 
   /**
