@@ -99,21 +99,21 @@ export class LineChartVisualization implements Viz {
       return [];
     }
 
-    //getting the xaxis column name
+    // getting the xaxis column name
     const xValue = _.get(this.queryResult, ['group_by', 0, 'name'], '');
 
-    //mapping all the xaxis values
+    // mapping all the xaxis values
     const xValues = _.chain(this.queryResult?.result)
       .map((item) => item[xValue])
       .orderBy()
       .value();
 
-    //mapping the xaxis values indices
+    // mapping the xaxis values indices
     _.forEach(xValues, (value: string, index: number) => {
       this.xAxisMap.set(value, index);
     });
 
-    //set the xaxis length
+    // set the xaxis length
     this.xAxisLen = xValues.length;
 
     return xValues;
@@ -122,7 +122,7 @@ export class LineChartVisualization implements Viz {
   /**
    * returns the body of the table as html string
    */
-  private getYAxesValues(): Array<Highcharts.SeriesOptionsType> {
+  private getYAxesValues(): Highcharts.SeriesOptionsType[] {
     /*
      * We will do a sanity check for the query result
      * Then we will iterate and map data of each column
@@ -140,18 +140,18 @@ export class LineChartVisualization implements Viz {
      * Then we will get th unsorted values
      * Then we will get the sorted values
      */
-    //getting the xaxis column name
+    // getting the xaxis column name
     const xValue = _.get(this.queryResult, ['group_by', 0, 'name'], '');
 
-    //getting the unsorted values
-    const unsorted: Array<any> = _.chain(this.queryResult?.result)
+    // getting the unsorted values
+    const unsorted: any[] = _.chain(this.queryResult?.result)
       .map((item) => ({ y: item[col.name], index: this.xAxisMap.get(item[xValue]) }))
       .value();
 
-    //initializing the yaxis values
+    // initializing the yaxis values
     const yValues = new Array<any>(this.xAxisLen);
 
-    //getting the sorted values
+    // getting the sorted values
     for (const yValue of unsorted) {
       const index: number = yValue.index;
       yValues[index] = +yValue.y;
