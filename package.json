@@ -1,6 +1,6 @@
 {
   "name": "@cuttleai/visualizations",
-  "version": "0.0.5",
+  "version": "0.0.51",
   "description": "visualizations library for visualizing the data in cuttle platform wriiten in typescript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -45,8 +45,11 @@
     "style-loader": "^1.2.0"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.150",
     "datatables.net": "^1.10.20",
     "datatables.net-dt": "^1.10.20",
-    "jquery": "^3.5.0"
+    "highcharts": "^8.0.4",
+    "jquery": "^3.5.0",
+    "lodash": "^4.17.15"
   }
 }

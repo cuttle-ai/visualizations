@@ -5,9 +5,11 @@
 import QueryResult from './models/query';
 import { Viz } from './visualization';
 import { TableVisualization } from './table';
+import { LineChartVisualization } from './line-chart';
 
 export * from './models';
 export * from './table';
+export * from './line-chart';
 export * from './visualization';
 
 /**
@@ -21,6 +23,8 @@ export default function initViz(id: string, queryResult: QueryResult): Viz | nul
    */
   if (queryResult?.type === 'TABLE') {
     return new TableVisualization(id, queryResult);
+  } else if (queryResult?.type === 'LINECHART') {
+    return new LineChartVisualization(id, queryResult);
   }
   return null;
 }
