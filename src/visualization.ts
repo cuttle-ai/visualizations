@@ -24,4 +24,5 @@ export interface Viz {
 export enum VizType {
   Table = 1,
   LinceChart = 2,
+  ColumnChart = 3,
 }
