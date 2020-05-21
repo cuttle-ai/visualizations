@@ -15,7 +15,7 @@ import Column from './models/column';
 /**
  * ColumnChartVisualization will draw a column chart for the given visualization data
  *
- * @example let lcv = new ColumnChartVisualization(id, queryResult); lcv.render();
+ * @example let ccv = new ColumnChartVisualization(id, queryResult); ccv.render();
  */
 export class ColumnChartVisualization implements Viz {
   /**

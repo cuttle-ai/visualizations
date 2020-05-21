@@ -7,6 +7,7 @@ import { Viz } from './visualization';
 import { TableVisualization } from './table';
 import { LineChartVisualization } from './line-chart';
 import { ColumnChartVisualization } from './column-chart';
+import { PieChartVisualization } from './pie-chart';
 
 export * from './models';
 export * from './table';
@@ -29,6 +30,8 @@ export default function initViz(id: string, queryResult: QueryResult): Viz | nul
     return new LineChartVisualization(id, queryResult);
   } else if (queryResult?.type === 'COLUMNCHART') {
     return new ColumnChartVisualization(id, queryResult);
+  } else if (queryResult?.type === 'PIECHART') {
+    return new PieChartVisualization(id, queryResult);
   }
   return null;
 }
