@@ -26,4 +26,5 @@ export enum VizType {
   LinceChart = 2,
   ColumnChart = 3,
   PieChart = 4,
+  BarChart = 5,
 }

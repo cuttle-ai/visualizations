@@ -8,11 +8,10 @@ import { TableVisualization } from './table';
 import { LineChartVisualization } from './line-chart';
 import { ColumnChartVisualization } from './column-chart';
 import { PieChartVisualization } from './pie-chart';
+import { BarChartVisualization } from './bar-chart';
 
 export * from './models';
 export * from './table';
-export * from './line-chart';
-export * from './column-chart';
 export * from './visualization';
 
 /**
@@ -32,6 +31,8 @@ export default function initViz(id: string, queryResult: QueryResult): Viz | nul
     return new ColumnChartVisualization(id, queryResult);
   } else if (queryResult?.type === 'PIECHART') {
     return new PieChartVisualization(id, queryResult);
+  } else if (queryResult?.type === 'BARCHART') {
+    return new BarChartVisualization(id, queryResult);
   }
   return null;
 }

@@ -37,7 +37,7 @@ export class ColumnChartVisualization implements Viz {
   type: VizType = VizType.ColumnChart;
 
   /**
-   * xAxisMap has the x axis values mapped to their indicies int he chart
+   * xAxisMap has the x axis values mapped to their indicies in the chart
    */
   xAxisMap = new Map<string, number>();
 
