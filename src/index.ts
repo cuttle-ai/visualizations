@@ -9,6 +9,7 @@ import { LineChartVisualization } from './line-chart';
 import { ColumnChartVisualization } from './column-chart';
 import { PieChartVisualization } from './pie-chart';
 import { BarChartVisualization } from './bar-chart';
+import { StackedColumnChartVisualization } from './stacked-column-chart';
 
 export * from './models';
 export * from './table';
@@ -33,6 +34,8 @@ export default function initViz(id: string, queryResult: QueryResult): Viz | nul
     return new PieChartVisualization(id, queryResult);
   } else if (queryResult?.type === 'BARCHART') {
     return new BarChartVisualization(id, queryResult);
+  } else if (queryResult?.type === 'STACKEDCOLUMNCHART') {
+    return new StackedColumnChartVisualization(id, queryResult);
   }
   return null;
 }
