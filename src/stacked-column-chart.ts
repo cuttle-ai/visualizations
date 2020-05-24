@@ -34,7 +34,7 @@ export class StackedColumnChartVisualization implements Viz {
   /**
    * type of the visuzaltion is stacked column chart
    */
-  type: VizType = VizType.ColumnChart;
+  type: VizType = VizType.StackedColumnChart;
 
   /**
    * xAxisMap has the x axis values mapped to their indicies in the chart
